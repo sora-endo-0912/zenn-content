@@ -3,7 +3,7 @@ title: "SKILL.md は 220 行で切られる前提で書く"
 emoji: "📏"
 type: "tech"
 topics: ["claude", "生成ai", "ワークフロー"]
-published: false
+published: true
 ---
 > 本記事は [AetherEchoes](https://aether-echoes.com) の元記事の**要約**です。全文・事故の時系列・全指針は初出をご覧ください。
 > **初出: https://aether-echoes.com/posts/skill-md-220-lines-truncation-redesign**
