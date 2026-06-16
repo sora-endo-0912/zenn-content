@@ -1,0 +1,29 @@
+---
+title: "SKILL.md は 220 行で切られる前提で書く"
+emoji: "📏"
+type: "tech"
+topics: ["claude", "生成ai", "ワークフロー"]
+published: false
+---
+> 本記事は [AetherEchoes](https://aether-echoes.com) の元記事の**要約**です。全文・事故の時系列・全指針は初出をご覧ください。
+> **初出: https://aether-echoes.com/posts/skill-md-220-lines-truncation-redesign**
+
+## 要点：SKILL.md は「末尾まで読まれない」前提で書く
+
+haru0416 さんの観測記事（Zenn）で、**Codex CLI が 441 行の SKILL.md のうち先頭 220 行しか context に入れていなかった**、という実コマンドログが共有されました。これは「LLM のコンテキスト窓が足りない」のではなく、**ツール側がファイルを途中で打ち切っている**という話です。Claude Code でも同種の挙動を踏みやすい。
+
+AetherEchoes では auto-publish の 6 スキル（pick / write / verify / video / breaking / カテゴリ別）でまさに同じ事故を踏んでいました。実際 2026-05-20 から 2 日間、breaking スロットが pick 段で停止し続けた一因が「末尾に書いた指示が読まれていなかった」ことでした。
+
+## 書き直しで採用した指針（抜粋）
+
+- **1 ファイル 200 行以内**にする（220 行で切られる前提で逆算）
+- **鉄則・禁止事項は必ず冒頭**に置く（末尾は読まれない前提）
+- **共通ロジックは別ファイルに切り出して参照**（本体を薄く保つ）
+
+残りの指針と、事故の詳細な振り返り・before/after は初出記事にまとめています。
+
+---
+
+LLM 向けの指示ファイル（SKILL.md / AGENTS.md 等）を書く人の参考になればと思います。全文はこちら：
+
+**👉 https://aether-echoes.com/posts/skill-md-220-lines-truncation-redesign**
